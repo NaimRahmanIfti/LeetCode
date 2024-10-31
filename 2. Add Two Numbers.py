@@ -1,4 +1,3 @@
-Definition for singly-linked list.
 class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
@@ -13,10 +12,6 @@ class Solution(object):
                 print(j)
 
         sum.append(i+ j)
-
-
-
-
 
         return sum
 l1 = [2, 4, 3]

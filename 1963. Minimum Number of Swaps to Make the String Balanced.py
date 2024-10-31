@@ -1,21 +1,22 @@
 class Solution:
     def minSwaps(self, s):
         count = 0
-        stack = []
         for c in s:
             if c == '[':
-                stack.append(c)
+                count += 1
             else:
-                if stack:
-                    stack.pop()
-                    count += 1
+                if count > 0:
+                    count -= 1
                 else:
                     count += 1
-
-        return round(count/2)
+        return (count//2)
 
 so = Solution()
 print(so.minSwaps('][][]['))
+
+
+
+
 
 
 
