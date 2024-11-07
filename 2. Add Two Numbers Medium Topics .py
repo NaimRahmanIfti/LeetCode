@@ -12,8 +12,7 @@ class Solution:
                 l1.val = l1.val + carry
             if l2:
                 l2.val = l2.val + carry
-            sum = l1.val + l2.val 
-            carry = sum // 10
+
             list.next = ListNode(sum % 10)
             list = list.next
             if l1:
@@ -21,7 +20,6 @@ class Solution:
             if l2:
                 l2 = l2.next
         return list.next
-
 
 
 l1 = [2,4,3]
