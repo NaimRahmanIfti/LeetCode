@@ -1,13 +1,18 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
-        def climbway(n):
-            if n == 1:
-                 return 1
-            if n == 2:
-                return 2
-        # if n >= 3:
-            return climbway(n -1) + climbway(n -2)
-        return climbway(n)
+        if n == 1:
+            return 1
+        if n == 2:
+            return 2
+
+        a = 1
+        b = 1
+        for i in range(3, n+1):
+            a, b = b, a+b
+            if i == n:
+                return b
+        return b
+
 
 
 n = 44
