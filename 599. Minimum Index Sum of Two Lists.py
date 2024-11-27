@@ -9,7 +9,6 @@ class Solution:
             for j in range(len(list2)):
                 if list2[j] in list1[i]:
                     index_sum = i + j
-
                     if index_sum < min_sum:
                         min_sum = index_sum
                         new_l = [list1[i], list2[j]]
@@ -22,3 +21,4 @@ class Solution:
 list1 = ["Shogun", "Tapioca Express", "Burger King", "KFC"]
 list2 = ["Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"]
 print(Solution().findRestaurant(list1, list2))
+``
